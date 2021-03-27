@@ -1,0 +1,264 @@
+.logo {
+  font-family: "Potta One", sans-serif;
+  color: var(--primary-text-color);
+  padding: 5px 20px;
+  font-size: 25px;
+}
+
+.logo a:hover {
+  opacity: 0.8;
+  transition: all ease 0.5s;
+  font-size: 31px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-size: 18px;
+}
+
+#nav {
+  background-color: var(--tetirary-text-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  height: auto;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item a {
+  color: #ddd;
+}
+
+.menu,
+.submenu {
+  list-style-type: none;
+}
+
+.item.button {
+  padding: 15px 35px;
+  border: none;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: var(--primary-text-color);
+  transition: all ease 0.5s;
+  transform: scale(1.1);
+}
+
+.item.button:hover {
+  transform: scale(1.1);
+  transition: all ease 0.5s;
+}
+
+.no-href {
+  cursor: pointer;
+}
+
+li#menu-active a {
+  border-bottom: 3px solid var(--primary-text-color);
+  padding-right: 8px;
+}
+
+/*** Mobile Menu ****/
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px 5px;
+}
+
+.menu li.subitem a {
+  padding: 15px;
+}
+
+.toggle {
+  order: 1;
+  font-size: 30px;
+  margin: 0;
+  color: var(--primary-text-color);
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  transition: all ease 0.5s;
+  opacity: 0.8;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: none;
+}
+
+.active .item {
+  display: block;
+}
+
+.item.button {
+  border-bottom: 1px solid grey;
+}
+
+/**** STYLING THE SUBMENU *****/
+.submenu {
+  display: none;
+}
+
+.submenu-active .submenu {
+  display: block;
+}
+
+.has-submenu i {
+  font-size: 12px;
+}
+
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+
+.subitem a {
+  padding: 10px 15px;
+}
+
+.submenu-active {
+  border-radius: 3px;
+}
+
+.submenu-active .submenu {
+  background-color: #2c3e50;
+  display: block;
+  width: 100%;
+}
+
+#nav.scroll-change {
+  position: fixed;
+  width: 100%;
+  background-color: var(--tetirary-text-color);
+  padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .item.button {
+    border: none;
+    background-color: var(--primary-text-color);
+    padding: 0px 17px;
+    margin: 15px 0;
+  }
+
+  .item.button:hover {
+    color: #fff;
+    opacity: 0.7;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all ease 0.5s;
+  }
+}
+
+/* media query for laptops and desktops */
+@media screen and (min-width: 1100px) {
+  #nav {
+    padding-top: 30px;
+    background-color: transparent;
+    transition: all 0.5s ease;
+  }
+
+  #nav.scroll-change {
+    position: fixed;
+    width: 100%;
+    background-color: var(--tetirary-text-color);
+    padding: 0;
+  }
+
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background-color: none;
+  }
+
+  .logo {
+    order: 0;
+    margin-left: 105px;
+  }
+
+  .logo a {
+    font-size: 30px;
+  }
+
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+    padding: 16px 18px;
+    color: #fff;
+  }
+
+  .item.button {
+    order: 2;
+    margin-right: 100px;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .item.submenu-active {
+    background-color: none;
+  }
+
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    top: 70%;
+    background-color: #55555590;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}

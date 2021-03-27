@@ -1,0 +1,95 @@
+/* The Style sheet for the blog-list page */
+#blog-lists {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.blog-list-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  margin: 90px auto 40px;
+  justify-content: center;
+}
+
+.blog-list-item {
+  width: 90%;
+  margin: 20px 0;
+  background-color: var(--primary-bg);
+  text-align: center;
+  transition: all ease 0.5s;
+}
+
+.blog-list-item:hover {
+  background-color: #fff;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  box-shadow: 5px 5px 15px 5px var(--primary-bg);
+}
+
+.blog-list-container .blog-list-item img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.blog-list-item span {
+  font-size: 17px;
+  color: var(--quatenary-text-color);
+}
+
+.blog-list-item p {
+  padding: 10px 15px 10px;
+  font-weight: bold;
+  color: var(--tetirary-text-color);
+  font-size: 20px;
+  margin: 0 20px 20px;
+}
+
+.blog-pagination {
+  margin: 0 auto 40px;
+}
+
+.blog-pagination a {
+  padding: 10px 8px;
+  border: 1px solid var(--primary-text-color);
+  font-weight: lighter;
+}
+
+.blog-pagination a:hover {
+  background-color: var(--primary-text-color);
+  color: #fff;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.blog-pagination a.pagination-active {
+  background-color: var(--primary-text-color);
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  #blog-lists .blog-list-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .blog-list-container .blog-list-item {
+    width: 80%;
+    margin: 10px auto 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #blog-lists .blog-list-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .blog-list-container .blog-list-item {
+    width: 80%;
+    margin: 10px auto 20px;
+  }
+}

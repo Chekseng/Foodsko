@@ -1,0 +1,52 @@
+.description {
+  padding: 160px 12px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description h2,
+.description p,
+.description i {
+  color: #fff;
+}
+
+.description h2 {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.contact-description {
+  background-image: var(--second-gradient),
+    url("../img/description/description-contact.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.blog-description {
+  background-image: var(--second-gradient),
+    url("../img/description/description-blog-1.jpg");
+  background-size: cover;
+  background-position: top;
+}
+
+.about-description {
+  background-image: var(--second-gradient),
+    url("../img/description/description-about-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-description {
+  background-image: var(--second-gradient), url("../img/menu-list/menu-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-description {
+  background-image: var(--second-gradient),
+    url("../img/random/gallery-bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,171 @@
+/* Style sheet for the footer section */
+#footer {
+  background-color: var(--tetirary-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 40px;
+  flex-wrap: wrap;
+  color: var(--quinary-text-color);
+}
+
+.footer-container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
+.footer-section {
+  width: 23%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding-right: 20px;
+}
+
+.footer-logo h2 {
+  font-family: "Potta One", sans-serif;
+  color: var(--primary-text-color);
+  font-family: 20px;
+}
+
+.footer-container h2 {
+  font-size: 22px;
+  padding-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.footer-logo .footer-logo-icon i {
+  padding: 10px;
+  background-color: #00000030;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer-logo .footer-logo-icon i:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+  color: var(--primary-text-color);
+}
+
+.footer-open-hours li {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-open-hours ul li span:nth-child(2) {
+  padding-right: 15px;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  display: block;
+  margin: 0 20px 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  font-style: italic;
+  border: 2px solid var(--primary-text-color);
+  background-color: transparent;
+  color: var(--quinary-text-color);
+}
+
+.footer-newsletter input:focus {
+  font-style: normal;
+}
+
+.footer-newsletter button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background-color: var(--primary-text-color);
+  color: var(--quinary-text-color);
+  font-size: 16px;
+  transition: all ease 0.5s;
+}
+
+.footer-newsletter button:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.footer-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-gallery-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+}
+
+.footer-gallery .footer-gallery-item {
+  width: 25%;
+  height: 25%;
+  padding: 25px;
+  margin: 2px;
+  background-color: lightsalmon;
+  cursor: pointer;
+}
+
+.footer-gallery-item:nth-child(1) {
+  background-image: url("../../img/menu-list/entree-1.jpg");
+  background-size: cover;
+}
+
+.footer-gallery-item:nth-child(2) {
+  background-image: url("../../img/menu-list/drink-1.jpg");
+  background-size: cover;
+}
+
+.footer-gallery-item:nth-child(3) {
+  background-image: url("../../img/menu-list/dessert-1.jpg");
+  background-size: cover;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* background-color: lightblue; */
+    width: 100%;
+  }
+
+  .footer-section {
+    /* background-color: lightsalmon; */
+    width: 50%;
+  }
+
+  .footer-open-hours li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #footer #footer-copyright {
+    padding: 0 50px;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+  }
+
+  .footer-section {
+    width: 100%;
+    padding: 0 50px;
+  }
+
+  .footer-open-hours li {
+    display: flex;
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,105 @@
+/* Style sheet for the reservation section of the home page */
+#reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-bg);
+}
+
+.reservation-left {
+  width: 50%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.reservation-left .reservation-left-img {
+  background-image: url("../../img/reservation/chef-1.jpg");
+  padding: 270px 200px;
+  margin-right: 50px;
+  background-color: cornsilk;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reservation-right {
+  width: 50%;
+}
+
+.reservation-right .reservation-form .reservation-form-container {
+  display: flex;
+}
+
+.reservation-form-left,
+.reservation-form-right {
+  display: flex;
+  flex-flow: column;
+  width: 36%;
+}
+
+.reservation-form label {
+  color: var(--tetirary-text-color);
+  font-size: 19px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.reservation-form label:not(:first-child),
+.reservation-form label:not(:nth-child(4)) {
+  padding-top: 20px;
+}
+
+.reservation-form select {
+  margin-bottom: 20px;
+}
+
+.reservation-form input,
+.reservation-form select {
+  width: 100%;
+  padding: 10px 10px;
+  border: 2px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  font-style: italic;
+  font-size: 16px;
+  background-color: var(--primary-bg);
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus {
+  font-style: normal;
+}
+
+.reservation-form-right {
+  margin-left: 20px;
+}
+
+.reservation-form option {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 950px) {
+  #reservation {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .reservation-left,
+  .reservation-right {
+    width: 100%;
+    padding: 10px 30px;
+  }
+
+  .reservation-form-container {
+    width: 100%;
+  }
+
+  .reservation-form-left,
+  .reservation-form-right {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #reservation {
+    overflow-y: hidden;
+  }
+}

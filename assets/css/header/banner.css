@@ -1,0 +1,277 @@
+/* Styling sheet for the banner part of header section */
+
+#banner {
+  width: 100%;
+  display: flex;
+}
+
+#banner .texts {
+  width: 50%;
+  /* background-color: lightpink; */
+  padding: 150px 30px 10px 130px;
+}
+
+#banner .texts h3 {
+  font-size: 29px;
+  color: var(--primary-text-color);
+  padding: 20px 0;
+}
+
+#banner .texts h1 {
+  font-size: 39px;
+  text-transform: uppercase;
+  color: var(--tetirary-text-color);
+  padding-bottom: 20px;
+}
+
+#banner .texts p {
+  color: var(--quatenary-text-color);
+  font-size: 16px;
+  padding-right: 40px;
+}
+
+#banner .texts .text-menu {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text-menu .text-menu-item {
+  margin: 0 20px;
+  padding: 0 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.text-menu-item span {
+  color: var(--quatenary-text-color);
+  display: block;
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.text-menu-item img:hover {
+  opacity: 0.8;
+  transition: all ease 0.5s;
+  transform: scale(1.1);
+}
+
+.text-menu .text-menu-item img {
+  width: 90px;
+  display: block;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#banner .texts .text-button {
+  padding: 15px 35px;
+  margin-top: 30px;
+  background-color: var(--primary-text-color);
+  color: var(--quinary-text-color);
+  font-weight: 500;
+  border: none;
+  transition: all ease-in-out 0.6s;
+}
+
+#banner .texts .text-button:hover {
+  background-color: rgba(255, 100, 38, 0.8);
+  transition: all ease-in-out 0.6s;
+  transform: scale(1.1);
+}
+
+#banner .texts .social-icons {
+  position: absolute;
+  top: 40%;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#banner .texts .social-icons i {
+  font-size: 25px;
+  margin: 10px 0;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+#banner .texts .social-icons i:hover {
+  opacity: 0.5;
+  transition: all ease-in 0.5s;
+  transform: scale(1.1);
+}
+
+#banner .slides {
+  width: 50%;
+}
+
+/************ CAROUSEL SLIDES STYLES **********/
+.slides {
+  position: relative;
+}
+
+.slides .slide-container {
+  display: flex;
+  position: relative;
+}
+
+.slides .slide {
+  display: none;
+  width: 100%;
+}
+
+.slides .slide-container .slide.one,
+.slide.two,
+.slide.three,
+.slide.four,
+.slide.five {
+  padding: 320px 0 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.slide.one {
+  background-image: var(--second-gradient),
+    url("../../img/header-slides/slider-3.jpg");
+}
+
+.slide.two {
+  background-image: var(--second-gradient),
+    url("../../img/header-slides/slider-4.jpg");
+}
+
+.slide.three {
+  background-image: var(--second-gradient),
+    url("../../img/header-slides/slider-5.jpg");
+}
+
+.slide.four {
+  background-image: var(--second-gradient),
+    url("../../img/header-slides/slider-6.jpg");
+}
+
+.slide.five {
+  background-image: var(--second-gradient),
+    url("../../img/header-slides/slider-2.jpg");
+}
+
+.slides .a-prev,
+.slides .a-next {
+  color: var(--quinary-text-color);
+  top: 94%;
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 5px 10px;
+  background-color: #55555550;
+  cursor: pointer;
+}
+
+.slides .a-next:hover,
+.slides .a-prev:hover {
+  background-color: #55555590;
+  color: var(--primary-text-color);
+}
+
+.slides .a-prev {
+  right: 0%;
+  margin-right: 35px;
+}
+
+.slides .a-next {
+  right: 0;
+}
+
+.dots-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  top: 35%;
+  right: 1%;
+}
+
+.dot {
+  background-color: var(--quinary-text-color);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: #dddddd90;
+}
+
+.active-dot {
+  background-color: var(--primary-text-color);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.9s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  #banner .slides {
+    display: none;
+  }
+
+  #banner .texts {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #000000c0, #000000bb),
+      url("../../img/menu-list/dessert-1.jpg");
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-left: 60px;
+  }
+
+  #banner .texts h1,
+  #banner .texts p,
+  .text-menu-item span {
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #banner {
+    overflow-y: hidden;
+  }
+  #banner .texts .text-menu {
+    display: none;
+  }
+}
